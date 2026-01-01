@@ -6,8 +6,8 @@
 export const content = {
   // Header
   header: {
-    title: "Design Brief Generator",
-    description: "Create comprehensive design briefs with style.",
+    title: "Landing Page Brief",
+    description: "Please fill out the form below. Thank you!",
   },
 
   // Action buttons
