@@ -20,11 +20,10 @@ import { cn } from "@/lib/utils";
 function SectionWrapper({ number, title, children }: { number: number; title: string; children: React.ReactNode }) {
   return (
     <section className="break-inside-avoid">
-      <div className="flex items-center gap-2 mb-4">
-        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-black text-white text-xs font-bold">
-          {number}
-        </span>
-        <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+      <div className="mb-4">
+        <h3 className="text-xl font-semibold tracking-tight">
+          {number}. {title}
+        </h3>
       </div>
       {children}
     </section>
@@ -153,7 +152,7 @@ export default function DesignBriefPage() {
                       value={formData.projectName}
                       onChange={(e) => handleChange("projectName", e.target.value)}
                       placeholder={content.briefHeader.projectName.placeholder}
-                      className="text-lg font-bold h-auto py-2 px-0 border-0 border-b border-gray-200 rounded-none focus-visible:ring-0 focus-visible:border-gray-900 placeholder:text-gray-200"
+                      className="text-base font-medium h-auto py-2 px-0 border-0 border-b border-gray-200 rounded-none focus-visible:ring-0 focus-visible:border-gray-900 placeholder:text-gray-400"
                     />
                   </div>
                   <div className="space-y-2">
@@ -165,7 +164,7 @@ export default function DesignBriefPage() {
                       value={formData.clientName}
                       onChange={(e) => handleChange("clientName", e.target.value)}
                       placeholder={content.briefHeader.client.placeholder}
-                      className="text-lg font-bold h-auto py-2 px-0 border-0 border-b border-gray-200 rounded-none focus-visible:ring-0 focus-visible:border-gray-900 placeholder:text-gray-200"
+                      className="text-base font-medium h-auto py-2 px-0 border-0 border-b border-gray-200 rounded-none focus-visible:ring-0 focus-visible:border-gray-900 placeholder:text-gray-400"
                     />
                   </div>
                 </div>
@@ -352,48 +351,13 @@ export default function DesignBriefPage() {
               <SectionWrapper number={8} title={content.specifications.title}>
                 <Card className="bg-gray-50/50 border-gray-100 shadow-none">
                   <CardContent className="pt-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label className="text-muted-foreground">{content.specifications.interactions.label}</Label>
-                        <Input
-                          name="interactions"
-                          value={formData.interactions}
-                          onChange={(e) => handleChange("interactions", e.target.value)}
-                          placeholder={content.specifications.interactions.placeholder}
-                          className="bg-white border-gray-200"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label className="text-muted-foreground">{content.specifications.cta.label}</Label>
-                        <Input
-                          name="cta"
-                          value={formData.cta}
-                          onChange={(e) => handleChange("cta", e.target.value)}
-                          placeholder={content.specifications.cta.placeholder}
-                          className="bg-white border-gray-200"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label className="text-muted-foreground">{content.specifications.pageCount.label}</Label>
-                        <Input
-                          name="pageCount"
-                          value={formData.pageCount}
-                          onChange={(e) => handleChange("pageCount", e.target.value)}
-                          placeholder={content.specifications.pageCount.placeholder}
-                          className="bg-white border-gray-200"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label className="text-muted-foreground">{content.specifications.cms.label}</Label>
-                        <Input
-                          name="cms"
-                          value={formData.cms}
-                          onChange={(e) => handleChange("cms", e.target.value)}
-                          placeholder={content.specifications.cms.placeholder}
-                          className="bg-white border-gray-200"
-                        />
-                      </div>
-                    </div>
+                    <Textarea
+                      name="interactions"
+                      value={formData.interactions}
+                      onChange={(e) => handleChange("interactions", e.target.value)}
+                      placeholder={content.specifications.placeholder}
+                      className="bg-transparent border-none focus-visible:ring-0 p-0 text-base leading-relaxed min-h-[100px]"
+                    />
                   </CardContent>
                 </Card>
               </SectionWrapper>

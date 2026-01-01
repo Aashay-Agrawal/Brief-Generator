@@ -21,11 +21,11 @@ export const content = {
   briefHeader: {
     projectName: {
       label: "Project Name",
-      placeholder: "e.g. Website Redesign 2024",
+      placeholder: "",
     },
     client: {
-      label: "Client",
-      placeholder: "Client Name & Contact Info",
+      label: "Client Name",
+      placeholder: "",
     },
     dateSubmitted: {
       label: "Date Submitted",
@@ -37,14 +37,14 @@ export const content = {
 
   // Section 1: Context & Problem
   context: {
-    title: "Context & Problem",
-    placeholder: "Briefly describe the market situation and opportunity. What are we trying to achieve?",
+    title: "Product Information",
+    placeholder: "About the product, service or brand ",
   },
 
   // Section 2: Objective
   objective: {
     title: "Objective",
-    placeholder: "What exactly should this website achieve? (e.g., generate leads, build credibility)",
+    placeholder: "Please provide a brief overview of this landing page project",
   },
 
   // Section 3: Scope
@@ -78,17 +78,17 @@ export const content = {
 
   // Section 7: Visual Direction
   visualDirection: {
-    title: "Visual Direction",
+    title: "Brand and Visual Identity",
     overallStyle: {
-      label: "Overall Style",
+      label: "Brand Personality",
       placeholder: "Minimal, Brutalist, Playful...",
     },
     constraints: {
-      label: "Constraints",
-      placeholder: "Brand guides, specific colors...",
+      label: "Tone of Voice",
+      placeholder: "How should the copy sound?",
     },
     references: {
-      label: "References",
+      label: "Visual Style Preferences",
       placeholder: "Links to websites or inspiration...",
     },
   },
@@ -96,27 +96,12 @@ export const content = {
   // Section 8: Specifications
   specifications: {
     title: "Specifications",
-    interactions: {
-      label: "Interactions & Motion",
-      placeholder: "Smooth scroll, Rive, Hover states...",
-    },
-    cta: {
-      label: "Call to Action",
-      placeholder: "Book demo, Buy now...",
-    },
-    pageCount: {
-      label: "Page Count (Est.)",
-      placeholder: "5-10 pages",
-    },
-    cms: {
-      label: "CMS Platform",
-      placeholder: "Framer, Notion, Excel",
-    },
+    placeholder: "Headline and Content Sections...",
   },
 
   // Section 9: Project Schedule
   schedule: {
-    title: "Project Schedule",
+    title: "Project Schedule (Optional)",
     table: {
       milestone: "Milestone",
       dueDate: "Due Date",
